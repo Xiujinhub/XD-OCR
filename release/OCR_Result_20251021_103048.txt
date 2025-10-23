@@ -1,0 +1,30 @@
+// 打开/关闭摄像头
+void MainWindow::on_pb_openCamera_clicked()
+le
+if (Im_isCameraopen) [
+//打开摄像头
+if（im_camera）
+m_camera = new cv:VideoCapture(6); // 表示默认摄像头
+
+if (m_camera->isOpened()) 
+m_isCameraopen = true;
+mcameraTimer->start(33);//fps
+ui>pbopenCamera>setext(关闭摄像头）；
+ui->pb_capure->setEnabled(true);
+else
+QMessageBox:warning(this，"错误”，“无法打开像头！"）;；
+delete m_camera;
+m_camera = nullptr;
+else
+
+
+//关闭摄像头
+m_cameraTmer->stop(;
+if (m_camera & m_camera->tsopened() [
+m_camera->release(
+
+m_isCameraopen = false;
+ui>pb_openCamera->setText("打开像头"）);
+ui->pb_capure->setEnabled(false);
+//清空显示
+uf->bb_show->clearr();
