@@ -1,0 +1,2 @@
+opencv4.10.0
+paddlepaddle2.6.2
